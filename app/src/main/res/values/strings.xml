@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">ShareTool</string>
+
+    <!-- Activity titles -->
+
+    <string name="title_activity_main">Login</string>
+
+    <!-- Widget strings    -->
+
+    <string name="TXT00001">Username</string>
+    <string name="TXT00002">Password</string>
+    <string name="TXT00003">Login</string>
+    <string name="TXT00004">Search</string>
+    <string name="TXT00005">Distance</string>
+    <string name="TXT00006">Price</string>
+    <string name="TXT00007">km</string>
+    <string name="TXT00008">\u20ac</string>
+    <string name="TXT00009">Order by</string>
+    <string name="TXT00011">Lat</string>
+    <string name="TXT00012">Long</string>
+    <string name="TXT00013">Get your current position</string>
+    <string name="TXT00014">Wrong username or password</string>
+    <string name="TXT00015">Searching. Please wait&#8230;</string>
+
+    <!-- Enum strings    -->
+
+    <string name="ENM00001">By Price desc</string>
+    <string name="ENM00002">By Distance desc</string>
+    <string name="ENM00003">By Price asc</string>
+    <string name="ENM00004">By Distance asc</string>
+
+</resources>
