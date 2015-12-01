@@ -1,5 +1,7 @@
 package com.booreg.sharetool.adapters;
 
+import de.greenrobot.event.EventBus;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -9,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.booreg.sharetool.App;
 import com.booreg.sharetool.R;
 import com.booreg.sharetool.activities.ToolActivity;
 import com.booreg.sharetool.model.Tool;
@@ -37,25 +38,28 @@ public class ToolListAdapter extends ArrayAdapter<Tool> implements AdapterView.O
     }
 
     //*****************************************************************************************************************
+    // Getters
+    //*****************************************************************************************************************
+
+    /** Returns the tools list of the adapter */ public List<Tool> getToolList() { return toolList; }
+
+    //*****************************************************************************************************************
     // Public section
     //*****************************************************************************************************************
 
-    @Override
-    public int     getCount ()             { return toolList.size(); }
-//    @Override public long    getItemId(int position) { return toolList.get(position).getObjectId(); }
-    @Override
-    public Tool getItem  (int position) { return toolList.get(position); }
+    @Override public int  getCount ()             { return toolList.size(); }
+    @Override public Tool getItem  (int position) { return toolList.get(position); }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-        Tool contact = toolList.get(position);
+        Tool tool = toolList.get(position);
 
         Context context = getContext();
 
         Intent intent = new Intent(context, ToolActivity.class);
 
-        intent.putExtra(App.OBJECT_ID, contact.getId());
+        EventBus.getDefault().postSticky(tool);
 
         context.startActivity(intent);
     }

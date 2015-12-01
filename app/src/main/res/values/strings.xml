@@ -17,11 +17,31 @@
     <string name="TXT00007">km</string>
     <string name="TXT00008">\u20ac</string>
     <string name="TXT00009">Order by</string>
+    <string name="TXT00010">Still not our user ?</string>
     <string name="TXT00011">Lat</string>
     <string name="TXT00012">Long</string>
     <string name="TXT00013">Get your current position</string>
     <string name="TXT00014">Wrong username or password</string>
     <string name="TXT00015">Searching. Please wait&#8230;</string>
+    <string name="TXT00016">No tools found with the given constraints</string>
+    <string name="TXT00017">Email</string>
+    <string name="TXT00018">Please enter a user name</string>
+    <string name="TXT00019">Please enter a valid e-mail address</string>
+    <string name="TXT00020">Please enter a password</string>
+    <string name="TXT00021">Please enter a password confirmation</string>
+    <string name="TXT00022">Something went wrong when creating Parse user: %s</string>
+    <string name="TXT00023">User created</string>
+    <string name="TXT00024">Create an account now clicking here!</string>
+    <string name="TXT00025">Confirm password</string>
+    <string name="TXT00026">Create now!</string>
+    <string name="TXT00027">Create you account</string>
+    <string name="TXT00028">Name</string>
+    <string name="TXT00029">Description</string>
+    <string name="TXT00030">Owner name</string>
+    <string name="TXT00031">Price</string>
+    <string name="TXT00032">Distance</string>
+    <string name="TXT00033">Position</string>
+    <string name="TXT00034">Error when retrieving owner\'s data: %s</string>
 
     <!-- Enum strings    -->
 
@@ -29,5 +49,9 @@
     <string name="ENM00002">By Distance desc</string>
     <string name="ENM00003">By Price asc</string>
     <string name="ENM00004">By Distance asc</string>
+
+    <!-- Menu strings    -->
+
+    <string name="MNU00001">Logout</string>
 
 </resources>

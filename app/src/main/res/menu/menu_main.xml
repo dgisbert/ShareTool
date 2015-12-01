@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      tools:context=".MainActivity">
+
+    <item android:id="@+id/logout"
+          android:title="@string/MNU00001"
+          app:showAsAction="ifRoom|withText"/>
+
+</menu>

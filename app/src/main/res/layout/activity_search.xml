@@ -18,60 +18,128 @@
         android:gravity="center_vertical"
         >
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/TXT00011"
-                android:id="@+id/TXT00011"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"/>
-
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:id="@+id/latitude"
-                android:enabled="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/TXT00012"
-                android:id="@+id/TXT00012"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"/>
-
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:id="@+id/longitude"
-                android:enabled="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"/>
-        </LinearLayout>
-
-        <ImageButton
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/yourPosition"
-            android:src="@android:drawable/ic_menu_mylocation"
-            android:contentDescription="@string/TXT00004"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/TXT00011"
+            android:id="@+id/TXT00011"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/latitude"
+            android:enabled="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/TXT00012"
+            android:id="@+id/TXT00012"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/longitude"
+            android:enabled="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/TXT00005"
+                android:id="@+id/TXT00005"
+                android:gravity="center_vertical"
+                />
+
+            <EditText
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/dist"
+                android:enabled="true"
+                android:maxLength="4"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/TXT00007"
+                android:id="@+id/TXT00007"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/TXT00006"
+                android:id="@+id/TXT00006"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/pric"
+                android:enabled="true"
+                android:maxLength="4"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/TXT00008"
+                android:id="@+id/TXT00008"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -110,90 +178,6 @@
         android:layout_height="wrap_content"
         >
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/TXT00005"
-                android:id="@+id/TXT00005"
-                android:gravity="center_vertical"
-                />
-
-            <EditText
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberSigned"
-                android:ems="10"
-                android:id="@+id/dist"
-                android:enabled="true"
-                android:maxLength="4"
-                android:gravity="center_vertical"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/TXT00007"
-                android:id="@+id/TXT00007"
-                android:gravity="center_vertical"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/TXT00006"
-                android:id="@+id/TXT00006"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:gravity="center_vertical"/>
-
-            <EditText
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberSigned"
-                android:ems="10"
-                android:id="@+id/pric"
-                android:enabled="true"
-                android:maxLength="4"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:gravity="center_vertical"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/TXT00008"
-                android:id="@+id/TXT00008"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -222,6 +206,15 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/TXT00015"
             android:id="@+id/messagePleaseWait"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/TXT00016"
+            android:id="@+id/noToolsFound"
             android:layout_gravity="center_horizontal"
             android:visibility="gone"/>
 

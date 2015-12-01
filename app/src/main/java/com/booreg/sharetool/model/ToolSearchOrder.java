@@ -9,10 +9,10 @@ import com.booreg.sharetool.R;
 
 public enum ToolSearchOrder
 {
-      /** By price ascending     */ BY_PRIC_DESC (R.string.ENM00001)
-    , /** By price descending    */ BY_DIST_DESC (R.string.ENM00002)
-    , /** By distance ascending  */ BY_PRIC_ASC  (R.string.ENM00003)
-    , /** By distance descending */ BY_DIST_ASC  (R.string.ENM00004)
+      /** By price ascending     */ BY_PRIC_ASC  (R.string.ENM00003)
+    , /** By distance ascending  */ BY_DIST_ASC  (R.string.ENM00004)
+    , /** By price descending    */ BY_PRIC_DESC (R.string.ENM00001)
+    , /** By distance descending */ BY_DIST_DESC (R.string.ENM00002)
     ;
 
     private int resId;

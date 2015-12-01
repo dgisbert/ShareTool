@@ -15,22 +15,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
     >
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SearchActivity"
-                  android:configChanges="orientation|screenSize"
-                  android:theme="@style/AppTheme"
-        >
+        <activity android:name=".activities.CreateAccountActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="activities.LoginActivity"/>
+            >
+        </activity>
+        <activity android:name=".activities.SearchActivity">
         </activity>
         <activity android:name=".activities.ToolActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SearchActivity" />
         </activity>
     </application>
 

@@ -3,9 +3,11 @@ package com.booreg.sharetool.model;
 import com.parse.ParseClassName;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 /**
@@ -13,7 +15,7 @@ import java.util.Comparator;
  */
 
 @ParseClassName("Tool")
-public class Tool extends ParseObject
+public class Tool extends ParseObject implements Serializable
 {
     /** Name of name field */ public static final String NAME = "name";
     /** Name of dscr field */ public static final String DSCR = "dscr";
@@ -70,7 +72,7 @@ public class Tool extends ParseObject
     /** Gets field name of this object */ public String        getName() { return getString(NAME); }
     /** Gets field dscr of this object */ public String        getDscr() { return getString(DSCR); }
     /** Gets field lngi of this object */ public ParseGeoPoint getPosi() { return getParseGeoPoint(POSI); }
-    /** Gets field owid of this object */ public String        getOwid() { return getString(OWID); }
+    /** Gets field owid of this object */ public ParseUser     getOwid() { return getParseUser(OWID); }
     /** Gets field pric of this object */ public Number        getPric() { return getNumber(PRIC); }
 
     /** Gets field dist of this object */ public Number        getDist() { return dist; }

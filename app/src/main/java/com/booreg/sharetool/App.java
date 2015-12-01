@@ -14,7 +14,7 @@ import com.parse.ParseObject;
 
 public class App extends Application
 {
-    public static final String OBJECT_ID = "OBJECT_ID";
+    public static final String TOOL_OBJECT = "TOOL_OBJECT";
 
     private static final String APPLICATION_ID = "2QePHKyrZMo0v7Q6grxWepfQxUqaSqbx0AMAAExI";
     private static final String CLIENT_ID = "iJU5W1WBweD8k9CQOfkTL3d6AIE2dg2eWl9Ay017";

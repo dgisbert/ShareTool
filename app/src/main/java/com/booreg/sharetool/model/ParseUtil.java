@@ -4,19 +4,16 @@ import android.location.Location;
 import android.util.Log;
 
 import com.booreg.common.android.BackgroundTaskListener;
-import com.booreg.common.android.LocationUtil;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Offers methods for accessing data through Parse
@@ -33,8 +30,6 @@ public class ParseUtil
     private static class ParseCallbackTool implements FindCallback<Tool>
     {
         BackgroundTaskListener<List<Tool>> backgroundTaskListener;
-        ToolSearchOrder                    toolSearchOrder;
-        Location                           location;
 
         @Override
         public void done(List<Tool> toolList, ParseException e)
@@ -46,37 +41,7 @@ public class ParseUtil
                     Tool.unpinAll();
                     Tool.pinAll(Tool.class.getSimpleName(), toolList);
 
-                    // For each tool, we calculate the distance to our position, if it has bee given
-
-                    if (location != null)
-                    {
-                        for (Tool tool:toolList)
-                        {
-                            ParseGeoPoint parseGeoPoint = tool.getPosi();
-
-                            float dist = location.distanceTo(LocationUtil.getLocation(parseGeoPoint.getLatitude(), parseGeoPoint.getLongitude())) / 1000;
-
-                            tool.setDist(dist);
-                        }
-                    }
-
-                    // Results are ordered after data retrieval by price or distance
-
-                    Set<Tool> set = null;
-
-                    // Order
-
-                    switch(toolSearchOrder)
-                    {
-                        case BY_PRIC_ASC : set = new TreeSet<>(new Tool.OrderByPricComparator());      break;
-                        case BY_PRIC_DESC: set = new TreeSet<>(new Tool.OrderByPricComparator(true));  break;
-                        case BY_DIST_ASC : set = new TreeSet<>(new Tool.OrderByDistComparator());      break;
-                        case BY_DIST_DESC: set = new TreeSet<>(new Tool.OrderByDistComparator(true));  break;
-                    }
-
-                    set.addAll(toolList);
-
-                    if (backgroundTaskListener != null) backgroundTaskListener.onFinish(new ArrayList<>(set));
+                    if (backgroundTaskListener != null) backgroundTaskListener.onFinish(toolList);
                 }
                 catch (ParseException e2)
                 {
@@ -85,11 +50,9 @@ public class ParseUtil
             }
         }
 
-        public ParseCallbackTool(BackgroundTaskListener<List<Tool>> backgroundTaskListener, ToolSearchOrder toolSearchOrder, Location location)
+        public ParseCallbackTool(BackgroundTaskListener<List<Tool>> backgroundTaskListener)
         {
             this.backgroundTaskListener = backgroundTaskListener;
-            this.toolSearchOrder        = toolSearchOrder;
-            this.location               = location;
         }
     }
 
@@ -101,7 +64,7 @@ public class ParseUtil
      * Retrieves tools from Parse given the filters specified by parameters
      */
 
-    public static void searchTools(BackgroundTaskListener<List<Tool>> backgroundTaskListener, String text, Number dist, Number pric, Location location, ToolSearchOrder toolSearchOrder)
+    public static void searchTools(BackgroundTaskListener<List<Tool>> backgroundTaskListener, String text, Number dist, Number pric, Location location)
     {
         ParseQuery<Tool> query = ParseQuery.getQuery(Tool.class);
 
@@ -123,7 +86,11 @@ public class ParseUtil
 
         if (pric != null) query.whereLessThanOrEqualTo(Tool.PRIC, pric);
 
-        query.findInBackground(new ParseCallbackTool(backgroundTaskListener, toolSearchOrder, location));
+        // User id filter
+
+        query.whereNotEqualTo(Tool.OWID, ParseUser.getCurrentUser());
+
+        query.findInBackground(new ParseCallbackTool(backgroundTaskListener));
     }
 
     /**
