@@ -37,11 +37,13 @@
     <string name="TXT00027">Create you account</string>
     <string name="TXT00028">Name</string>
     <string name="TXT00029">Description</string>
-    <string name="TXT00030">Owner name</string>
+    <string name="TXT00030">Owner</string>
     <string name="TXT00031">Price</string>
     <string name="TXT00032">Distance</string>
     <string name="TXT00033">Position</string>
     <string name="TXT00034">Error when retrieving owner\'s data: %s</string>
+    <string name="TXT00035">Set position</string>
+    <string name="TXT00036">City</string>
 
     <!-- Enum strings    -->
 

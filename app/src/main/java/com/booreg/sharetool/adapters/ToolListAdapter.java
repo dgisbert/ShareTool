@@ -35,6 +35,7 @@ public class ToolListAdapter extends ArrayAdapter<Tool> implements AdapterView.O
         protected TextView toolNameItem;
         protected TextView toolDistItem;
         protected TextView toolPricItem;
+        protected TextView toolCityItem;
     }
 
     //*****************************************************************************************************************
@@ -79,6 +80,7 @@ public class ToolListAdapter extends ArrayAdapter<Tool> implements AdapterView.O
             viewHolder.toolNameItem = (TextView) view.findViewById(R.id.toolNameItem);
             viewHolder.toolDistItem = (TextView) view.findViewById(R.id.toolDistItem);
             viewHolder.toolPricItem = (TextView) view.findViewById(R.id.toolPricItem);
+            viewHolder.toolCityItem = (TextView) view.findViewById(R.id.toolCityItem);
 
             view.setTag(viewHolder);
 
@@ -97,11 +99,13 @@ public class ToolListAdapter extends ArrayAdapter<Tool> implements AdapterView.O
 
         viewHolder.toolNameItem.setText(tool.getName());
 
+        String city = tool.getCity();
         Number dist = tool.getDist();
         Number pric = tool.getPric();
 
         if (dist != null) viewHolder.toolDistItem.setText(String.format(locale, "%.2f", dist.doubleValue()));
         if (pric != null) viewHolder.toolPricItem.setText(String.format(locale, "%.2f", pric.doubleValue()));
+        if (city != null) viewHolder.toolCityItem.setText(city);
 
         return view;
     }

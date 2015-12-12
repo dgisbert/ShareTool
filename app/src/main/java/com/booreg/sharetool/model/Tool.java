@@ -22,6 +22,7 @@ public class Tool extends ParseObject implements Serializable
     /** Name of posi field */ public static final String POSI = "posi";
     /** Name of owid field */ public static final String OWID = "owid";
     /** Name of pric field */ public static final String PRIC = "pric";
+    /** Name of city field */ public static final String CITY = "city";
 
     private Number dist;
 
@@ -74,6 +75,7 @@ public class Tool extends ParseObject implements Serializable
     /** Gets field lngi of this object */ public ParseGeoPoint getPosi() { return getParseGeoPoint(POSI); }
     /** Gets field owid of this object */ public ParseUser     getOwid() { return getParseUser(OWID); }
     /** Gets field pric of this object */ public Number        getPric() { return getNumber(PRIC); }
+    /** Gets field city of this object */ public String        getCity() { return getString(CITY); }
 
     /** Gets field dist of this object */ public Number        getDist() { return dist; }
 

@@ -32,23 +32,26 @@ public class ToolActivity extends AppCompatActivity
         // To retrieve object in second Activity
         Tool tool = EventBus.getDefault().removeStickyEvent(Tool.class);
 
-        ParseGeoPoint posi = tool.getPosi();
-
-        ((TextView) findViewById(R.id.toolName)).setText(tool.getName());
-        ((TextView) findViewById(R.id.toolDscr)).setText(tool.getDscr());
-        ((TextView) findViewById(R.id.toolPric)).setText(String.format(locale, "%.2f", tool.getPric().doubleValue()));
-        ((TextView) findViewById(R.id.toolDist)).setText(String.format(locale, "%.2f", tool.getDist().doubleValue()));
-        ((TextView) findViewById(R.id.toolLat)).setText(String.format(locale, "%.3f", posi.getLatitude()));
-        ((TextView) findViewById(R.id.toolLng)).setText(String.format(locale, "%.3f", posi.getLongitude()));
-
-        try
+        if (tool != null)
         {
-            ((TextView) findViewById(R.id.toolOwidName)).setText(tool.getOwid().fetchIfNeeded().getUsername());
-        }
-        catch (ParseException e)
-        {
-            ToastUtil.showLongToast(this, R.string.TXT00034, e.getMessage());
-        }
+            ParseGeoPoint posi = tool.getPosi();
 
+            ((TextView) findViewById(R.id.toolName)).setText(tool.getName());
+            ((TextView) findViewById(R.id.toolDscr)).setText(tool.getDscr());
+            ((TextView) findViewById(R.id.toolPric)).setText(String.format(locale, "%.2f", tool.getPric().doubleValue()));
+            ((TextView) findViewById(R.id.toolCity)).setText(tool.getCity());
+            ((TextView) findViewById(R.id.toolDist)).setText(String.format(locale, "%.2f", tool.getDist().doubleValue()));
+            ((TextView) findViewById(R.id.toolLat)).setText(String.format(locale, "%.3f", posi.getLatitude()));
+            ((TextView) findViewById(R.id.toolLng)).setText(String.format(locale, "%.3f", posi.getLongitude()));
+
+            try
+            {
+                ((TextView) findViewById(R.id.toolOwidName)).setText(tool.getOwid().fetchIfNeeded().getUsername());
+            }
+            catch (ParseException e)
+            {
+                ToastUtil.showLongToast(this, R.string.TXT00034, e.getMessage());
+            }
+        }
     }
 }

@@ -11,18 +11,10 @@
     android:paddingStart="20dp">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/TXT00028"
-            android:id="@+id/TXT00028"
-            android:layout_weight="1"/>
+        android:paddingTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,22 +23,6 @@
             android:id="@+id/toolName"
             android:layout_weight="1"
             />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingTop="20dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/TXT00029"
-            android:id="@+id/TXT00029"
-            android:layout_weight="1"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +46,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/TXT00030"
             android:id="@+id/TXT00030"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,40 +72,25 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/TXT00031"
             android:id="@+id/TXT00031"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/toolPric"
-            android:layout_weight="1"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingTop="20dp">
+            android:layout_gravity="end"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/TXT00032"
-            android:id="@+id/TXT00032"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/toolDist"
+            android:text="@string/TXT00008"
+            android:id="@+id/textView3"
             android:layout_weight="1"
-            />
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
 
     </LinearLayout>
 
@@ -145,13 +107,55 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/TXT00033"
             android:id="@+id/textView7"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/toolCity"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/TXT00032"
+                    android:id="@+id/TXT00032"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/toolDist"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/TXT00007"
+                    android:id="@+id/textView2"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -164,7 +168,8 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="@string/TXT00011"
                     android:id="@+id/TXT00011"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -186,7 +191,8 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="@string/TXT00012"
                     android:id="@+id/TXT00012"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"

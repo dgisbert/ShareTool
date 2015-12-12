@@ -337,6 +337,15 @@ public class SearchActivity extends AppCompatActivity
     }
 
     /**
+     * Sets the current position of the user
+     */
+
+    public void setMyPosition(View view)
+    {
+        getCurrentPosition();
+    }
+
+    /**
      * Responds to menu buttons
      */
 

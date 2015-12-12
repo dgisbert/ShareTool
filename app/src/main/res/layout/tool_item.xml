@@ -16,7 +16,7 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:orientation="horizontal"
-                  android:layout_width="wrap_content"
+                  android:layout_width="fill_parent"
                   android:layout_height="wrap_content">
 
         <TextView
@@ -24,7 +24,6 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/toolDistItem"
-            android:layout_weight="1"
             android:gravity="end"
             android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"
@@ -36,7 +35,6 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/TXT00007"
             android:id="@+id/TXT00007_2"
-            android:layout_weight="1"
             android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"
             />
@@ -46,7 +44,6 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/toolPricItem"
-            android:layout_weight="1"
             android:gravity="end"
             android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"
@@ -58,7 +55,16 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/TXT00008"
             android:id="@+id/TXT00008_2"
-            android:layout_weight="1"/>
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/toolCityItem"
+            android:singleLine="true"/>
     </LinearLayout>
 
 </LinearLayout>
