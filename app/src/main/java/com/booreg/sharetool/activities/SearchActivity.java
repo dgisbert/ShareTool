@@ -301,7 +301,7 @@ public class SearchActivity extends AppCompatActivity
             }
             else
             {
-                Toast.makeText(this, R.string.TXT00004, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.TXT00037, Toast.LENGTH_LONG).show();
             }
         }
     }

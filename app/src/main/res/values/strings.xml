@@ -44,6 +44,7 @@
     <string name="TXT00034">Error when retrieving owner\'s data: %s</string>
     <string name="TXT00035">Set position</string>
     <string name="TXT00036">City</string>
+    <string name="TXT00037">GPS service is not available. Please check if your device has GPS and it\'s enabled.</string>
 
     <!-- Enum strings    -->
 

@@ -105,7 +105,7 @@
                 android:maxLength="4"
                 android:gravity="center_vertical"
                 android:layout_weight="1"
-                android:inputType="number"/>
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -144,7 +144,7 @@
                 android:layout_marginStart="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1"
-                android:inputType="number"/>
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"

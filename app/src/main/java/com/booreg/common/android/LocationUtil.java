@@ -26,7 +26,7 @@ public class LocationUtil
     {
         PackageManager packageManager = context.getPackageManager();
 
-        return (packageManager != null) && packageManager.hasSystemFeature(PackageManager.FEATURE_LOCATION_GPS);
+        return (packageManager != null) && packageManager.hasSystemFeature(PackageManager.FEATURE_LOCATION);
     }
 
     /**

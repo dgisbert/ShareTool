@@ -37,7 +37,11 @@ public class Tool extends ParseObject implements Serializable
         @Override
         public int compare(Tool lhs, Tool rhs)
         {
-            return new CompareToBuilder().append(lhs.getPric().doubleValue(), rhs.getPric().doubleValue()).toComparison() * orderFactor;
+            return new CompareToBuilder().append(lhs.getPric().doubleValue(), rhs.getPric().doubleValue())
+                                         .append(lhs.getDist().doubleValue(), rhs.getDist().doubleValue())
+                                         .append(lhs.getName(), rhs.getName())
+                                         .append(lhs.getObjectId(), rhs.getObjectId())
+                                         .toComparison() * orderFactor;
         }
 
         public OrderByPricComparator() {}
@@ -55,7 +59,11 @@ public class Tool extends ParseObject implements Serializable
         @Override
         public int compare(Tool lhs, Tool rhs)
         {
-            return new CompareToBuilder().append(lhs.getDist().doubleValue(), rhs.getDist().doubleValue()).toComparison() * orderFactor;
+            return new CompareToBuilder().append(lhs.getDist().doubleValue(), rhs.getDist().doubleValue())
+                                         .append(lhs.getPric().doubleValue(), rhs.getPric().doubleValue())
+                                         .append(lhs.getName(), rhs.getName())
+                                         .append(lhs.getObjectId(), rhs.getObjectId())
+                                         .toComparison() * orderFactor;
         }
 
         public OrderByDistComparator() {}
